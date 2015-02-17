@@ -15,6 +15,7 @@
         _model.amountDue = 100;
         _model.amountPastDue = 35;
         _model.amount = 0;
+        _model.isManualInputSelected = false;
         // methods
         _model.submitForm = submitForm;
 
@@ -22,7 +23,7 @@
     // private methods
     function submitForm() {
       console.log('%c--- submitForm ---', 'color: #0000CC');
-      console.log('_model.amount: ' + (_model.amount));
+      console.log('_model.amount: ' + (_model.payment.amount));
     }
 
 

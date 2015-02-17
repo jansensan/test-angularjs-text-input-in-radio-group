@@ -7,8 +7,8 @@
           type="radio"
           name="amountInputRadio"
           value="{{vm.appModel.amountDue}}"
-          ng-model="vm.appModel.amount"
-          ng-focus="isManualInputSelected = false;"
+          ng-model="vm.appModel.payment.amount"
+          ng-focus="vm.appModel.isManualInputSelected = false;"
         /><span>{{vm.appModel.amountDue | currency}} Total Due</span>
       </label>
     </li>
@@ -19,8 +19,8 @@
           type="radio"
           name="amountInputRadio"
           value="{{vm.appModel.amountPastDue}}"
-          ng-model="vm.appModel.amount"
-          ng-focus="isManualInputSelected = false;"
+          ng-model="vm.appModel.payment.amount"
+          ng-focus="vm.appModel.isManualInputSelected = false;"
         /><span>{{vm.appModel.amountPastDue | currency}} Past Due</span>
       </label>
     </li>
@@ -30,18 +30,19 @@
         type="radio"
         name="amountInputRadio"
         value="0"
-        ng-model="vm.appModel.amount"
-        ng-checked="isManualInputSelected"
+        ng-model="vm.appModel.payment.type"
+        ng-checked="vm.appModel.isManualInputSelected"
       />
       <input
         name="paymentAmount"
         id="paymentAmount"
         type="text"
-        ng-model="vm.appModel.amount"
-        ng-focus="isManualInputSelected = true;"
-        ng-change="isManualInputSelected = true;"
-        ng-click="isManualInputSelected = true;"
+        ng-model="vm.appModel.payment.amount"
+        ng-focus="vm.appModel.isManualInputSelected = true;"
       />
+        <span>
+            {{vm.appModel.isManualInputSelected}}
+        </span>
     </li>
   </ul>
   <button
