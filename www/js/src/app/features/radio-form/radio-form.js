@@ -16,7 +16,7 @@
       controllerAs: 'vm',
       bindToController: true,
       scope: true,
-      templateUrl: '/templates/radio-form-tmpl.html'
+      templateUrl: './templates/radio-form-tmpl.html'
     };
   }
 
