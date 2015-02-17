@@ -1,1 +1,1 @@
-# test-angular-text-input-in-radio-group
+# Text input in radio group
